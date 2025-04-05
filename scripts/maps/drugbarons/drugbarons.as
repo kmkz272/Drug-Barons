@@ -1,5 +1,5 @@
-#include "../kmkz/data_savestate"
-#include "../kmkz/data_loadstate"
+#include "../kmkz/func_savestate"
+#include "../kmkz/func_loadstate"
 #include "../kmkz/utils"
 
 void LoadSettings() 
@@ -14,13 +14,13 @@ void LoadSettings()
 	
 	// data_savestate settings
 	
-	SaveAllowed =			true;
+	SaveAllowed =			false;
 	SaveVoteAlowed = 		true;	// "false" value allows to directly save at the slot chosen|| "true" value calls a vote to chose if you all want to save in that slot or not.
 	SaveVotePercentage =	70; 	// chose a value between 0 and 100 as percentage to pass the vote.
 	SaveVoteTime =			8;
 	// data_loadstate settings
 	
-	LoadAllowed =			true;
+	LoadAllowed =			false;
 	LoadVoteAlowed =		true; 	// "false" value allows to directly load the map from the slot chosen|| "true"  calls a vote to chose if you all want to load map from that slot or not.
 	LoadVotePercentage =	70; 	// chose a value between 0 and 100 as percentage to pass the vote.
 	LoadVoteTime =			8;
@@ -33,10 +33,10 @@ void LoadSettings()
 
 void MapInit()
 {
-	RegisterDataSavestate();
-	RegisterDataLoadstate();
-	RegisterDataGlobal();
-	GameSpritetext::Register();
+	RegisterFuncSavestate();
+	RegisterFuncLoadstate();
+	RegisterFuncGlobal();
+	RegisterGameSpriteText();
 	RegisterGameSpriteTextButton();
 	LoadSettings();
 }
