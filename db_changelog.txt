@@ -51,4 +51,9 @@ rede_db1: fixed barney being able to open the bathroom door early.
 rede_db2: fixed fade not affecting all the players.
 
 - v1.5.1
+5/4/2025
+scripts update.
+
+23/8/2025
+- v1.5.2
 scripts update.
